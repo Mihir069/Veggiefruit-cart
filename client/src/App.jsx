@@ -1,11 +1,9 @@
+import Test from "./components/test";
+import "./style.css";
 function App() {
 
   return (
-    <>
-      <p>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Test/>
   )
 }
 
