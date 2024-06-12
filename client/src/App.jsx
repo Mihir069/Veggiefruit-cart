@@ -1,9 +1,13 @@
-import Test from "./components/test";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./components/header";
 import "./style.css";
 function App() {
 
   return (
-    <Test/>
+    <BrowserRouter>
+      <Header/>
+    </BrowserRouter>
+    
   )
 }
 
