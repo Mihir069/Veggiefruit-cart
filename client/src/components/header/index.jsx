@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../common/logo";
 import Search from "../common/search";
@@ -10,6 +10,8 @@ import Envlope from "../common/envlope";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
     const headerList = [
         { id: 1, name: "Home", path: "/" },
         { id: 2, name: "Shop", path: "/shop" },
@@ -18,29 +20,43 @@ const Header = () => {
         { id: 5, name: "Contact", path: "/contact" },
     ];
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <div className="container px-4 mx-auto">
-            <div className=" hidden bg-lime-600 mx-20 px-10 md:flex items-start p-4 rounded-tl-[100px] rounded-bl-[50px] rounded-br-[100px] rounded-tr-[50px] justify-between ">
-                <div className="flex items-center">
-                    <Location/>
-                    <div className="px-3 text-white text-sm">
-                        123 Street, New York
+        <div className="container mx-auto">
+            <div className={`w-full transition-transform duration-300 ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
+                <div className="bg-lime-600 mx-20 px-10 md:flex items-start p-4 rounded-tl-[100px] rounded-bl-[50px] rounded-br-[100px] rounded-tr-[50px] justify-between">
+                    <div className="flex items-center">
+                        <Location />
+                        <div className="px-3 text-white text-sm tracking-wide">
+                            123 Street, New York
+                        </div>
+                        <Envlope />
+                        <div className="px-3 text-white text-sm tracking-wide">
+                            Email@Example.com
+                        </div>
                     </div>
-                    <Envlope/>
-                    <div className="px-3 text-white text-sm">
-                        Email@Example.com
+                    <div className="flex">
+                        <div className="px-3 text-white text-sm tracking-wide">
+                            Privacy Policy / Terms of Use / Sales and Refunds
+                        </div>
                     </div>
                 </div>
-                <div className="flex">
-                    <div className="px-3 text-white text-sm">
-                        Privacy Policy / Terms of Use / Sales and Refunds
-                    </div>
-                </div>
-               
             </div>
-            <nav className="flex justify-between items-center md:px-20 md:py-5">
+            <nav className={`top-0 bg-white z-10 flex justify-between items-center md:px-20 md:py-5 transition-transform duration-300 ease-in-out ${isScrolled ? 'fixed w-full shadow-lg' : ''}`}>
                 <div className="flex items-start">
-                    <Link to="/"><Logo /></Link>  
+                    <Link to="/"><Logo /></Link>
                 </div>
                 <div className="hidden md:flex items-center">
                     {headerList.map((item) => (
@@ -70,7 +86,7 @@ const Header = () => {
                 </div>
                 <div className="md:hidden flex items-center p-5">
                     <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="focus:outline-none">
-                        <Menu/>
+                        <Menu />
                     </button>
                 </div>
             </nav>

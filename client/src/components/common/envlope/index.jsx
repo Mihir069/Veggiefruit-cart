@@ -5,7 +5,7 @@ const Envlope = () =>{
         url:'/svg/envelope-solid.svg'
     }
     return(
-        <div className="w-3 ">
+        <div className="w-4 ">
             <img src={envlope.url} alt={envlope.alt}/>
         </div>
     )
