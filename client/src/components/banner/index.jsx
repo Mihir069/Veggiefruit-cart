@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+import CarouselImage from "../common/carousel-image";
 
 const Banner = () => {
     const bannerImg = {
@@ -6,27 +6,6 @@ const Banner = () => {
         alt: "banner-image",
         url: '/img/hero-img.jpg'
     };
-    // const heroImage = [
-    //     {
-    //         id:1,
-    //         alt:'hero-img-1',
-    //         url:'/img/hero-img-1.png'
-    //     },
-    //     {
-    //         id:2,
-    //         alt:'hero-img-2',
-    //         url:'/img/hero-img-2.jpg'
-    //     }
-    // ];
-
-    // const [currentIndex, setCurrentIndex] = useState(0);
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImage.length);
-    //     }, 3000);
-
-    //     return () => clearInterval(interval);
-    // }, [heroImage.length]);
 
     return (
         <div className="w-full relative bg-cover bg-center" style={{ backgroundImage: `url(${bannerImg.url})` }}>
@@ -40,10 +19,9 @@ const Banner = () => {
                             <button className="absolute z-10 text-white rounded-full border-2 font-semibold px-6 md:px-10 py-3 md:py-5 bg-lime-600 border-amber-400 right-8 md:right-[170px] hover:bg-amber-400 transition ease-in-out duration-300 focus:outline-none focus:ring focus:ring-gray-300">Submit Now</button>
                         </div>
                     </div>
-                    {/* <div className="flex flex-row justify-center px-6 md:px-20 mt-10 md:mt-0">
-                        <img src={heroImage[currentIndex].url} alt={heroImage[currentIndex].alt} className="w-[530px] h-64 md:w-100 md:h-100 object-cover rounded-xl" />
-                    </div> */}
-                    
+                    <div className=" w-[52%]" > 
+                        <CarouselImage />
+                    </div>
                 </div>
             </div>
         </div>
