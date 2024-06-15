@@ -10,6 +10,15 @@
     },
     {
         "id": 2,
+        "name": "Grapes",
+        "url": "/img/best-product-5.jpg",
+        "alt": "grapes",
+        "category": "fruits",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
+        "price": "$4.99 / kg"
+    },
+    {
+        "id": 3,
         "name": "Raspberries",
         "url": "/img/best-product-2.jpg",
         "alt": "raspberries",
@@ -18,7 +27,7 @@
         "price": "$4.99 / kg"
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Apricots",
         "url": "/img/best-product-4.jpg",
         "alt": "apricots",
@@ -27,19 +36,10 @@
         "price": "$4.99 / kg"
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Banana",
         "url": "/img/best-product-3.jpg",
         "alt": "bananas",
-        "category": "fruits",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
-        "price": "$4.99 / kg"
-    },
-    {
-        "id": 5,
-        "name": "Oranges",
-        "url": "/img/best-product-1.jpg",
-        "alt": "oranges",
         "category": "fruits",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt",
         "price": "$4.99 / kg"

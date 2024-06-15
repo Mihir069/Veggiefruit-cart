@@ -4,5 +4,6 @@ export const getAllProducts = async (query)=>{
         method:'GET'
     })
     const data = await response.json();
+    console.log(data)
     return data;
 }
