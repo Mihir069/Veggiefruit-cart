@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "Oranges",
+        "url": "/img/best-product-1.jpg",
+        "alt": "oranges",
+        "category": "fruits",
+        "price": "3.12 $"
+    },
+    {
+        "id": 2,
+        "name": "Raspberries",
+        "url": "/img/best-product-2.jpg",
+        "alt": "raspberries",
+        "category": "fruits",
+        "price": "3.12 $"
+    },
+    {
+        "id": 3,
+        "name": "Banana",
+        "url": "/img/best-product-3.jpg",
+        "alt": "bananas",
+        "category": "fruits",
+        "price": "3.12 $"
+    },
+    {
+        "id": 4,
+        "name": "Apricots",
+        "url": "/img/best-product-4.jpg",
+        "alt": "apricots",
+        "category": "fruits",
+        "price": "3.12 $"
+    },
+    {
+        "id": 5,
+        "name": "Grapes",
+        "url": "/img/best-product-5.jpg",
+        "alt": "grapes",
+        "category": "fruits",
+        "price": "3.12 $"
+    },
+    {
+        "id": 6,
+        "name": "Apple",
+        "url": "/img/best-product-6.jpg",
+        "alt": "apples",
+        "category": "fruits",
+        "price": "3.12 $"
+    }
+
+]

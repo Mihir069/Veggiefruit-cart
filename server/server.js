@@ -10,6 +10,7 @@ const fruits = require('./data/fruits.json');
 const meats = require('./data/meat.json');
 const vegetables = require('./data/vegetables.json');
 const organicVeg = require('./data/organicvegitable.json');
+const bestSeller = require('./data/bestseller.json');
 
 server.get('/all-products',(req,res)=>{
     res.json(allProducts)
@@ -33,6 +34,10 @@ server.get('/meats',(req,res)=>{
 
 server.get('/organic-vegetables',(req,res)=>{
     res.json(organicVeg)
+})
+
+server.get('/best-seller',(req,res)=>{
+    res.json(bestSeller)
 })
 
 server.listen(3000,()=>{

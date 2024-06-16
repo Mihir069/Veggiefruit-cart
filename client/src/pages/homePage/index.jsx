@@ -1,4 +1,5 @@
 import Banner from "../../components/banner";
+import BestSeller from "../../components/best-saler-products";
 import DiscountSection from "../../components/discount-section";
 import FruitBanner from "../../components/fruit-banner";
 import OrganicProducts from "../../components/organic-products";
@@ -14,6 +15,7 @@ const HomePage = () =>{
             <DiscountSection/>
             <OrganicVegetables/>
             <FruitBanner/>
+            <BestSeller/>
         </>
        
     )

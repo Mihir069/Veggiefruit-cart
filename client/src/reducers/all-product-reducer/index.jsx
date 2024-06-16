@@ -7,7 +7,8 @@ const allProductsSlice = createSlice({
         meat:[],
         vegerable:[],
         bread:[],
-        organicVegetables:[]
+        organicVegetables:[],
+        bestSeller:[]
     },
     reducers:{
         setAllProducts(state,action){
@@ -27,8 +28,11 @@ const allProductsSlice = createSlice({
         },
         setOrganicVegetables(state,action){
             state.organicVegetables = action.payload
+        },
+        setBestSeller(state,action){
+            state.bestSeller = action.payload
         }
     }
 })
-export const {setAllProducts,setFruits,setMeat,setBread,setVegetable,setOrganicVegetables} = allProductsSlice.actions;
+export const {setAllProducts,setFruits,setMeat,setBread,setVegetable,setOrganicVegetables,setBestSeller} = allProductsSlice.actions;
 export default allProductsSlice.reducer
