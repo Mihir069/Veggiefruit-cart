@@ -1,7 +1,7 @@
 import AddToCart from "../add-to-cart";
 const ProductCard = ( {productItems} ) => {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-2 sm:px-5">
+        <>
             {productItems.map((items) => (
                 <div className="p-3" key={items.id}>
                     <div className="border rounded-lg border-amber-400 hover:shadow-2xl ease-in-out duration-500">
@@ -19,7 +19,7 @@ const ProductCard = ( {productItems} ) => {
                                 {items.description}
                             </p>
                             <div className="pt-3 flex flex-row justify-between items-center">
-                                <div className="text-lg sm:text-xl ">
+                                <div className="text-lg sm:text-xl font-customFont font-semibold text-slate-600">
                                     {items.price}
                                 </div>
                                 <div className="px-1">
@@ -30,7 +30,7 @@ const ProductCard = ( {productItems} ) => {
                     </div>
                 </div>
             ))}
-        </div>
+        </>
     )
 }
 export default ProductCard;

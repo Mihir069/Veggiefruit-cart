@@ -30,14 +30,14 @@ const OrganicProducts = () => {
     ];
 
     const [active, setActive] = useState(categories[0].id);
-    const [fade,setFade] = useState(false)
+    const [fade, setFade] = useState(false)
     const handleCategoryClick = (id) => {
         setFade(true)
-        setTimeout(()=>{
+        setTimeout(() => {
             setFade(false)
             setActive(id)
-        },300)
-        
+        }, 300)
+
     };
     return (
         <div className="p-4 sm:p-10 lg:p-20">
@@ -59,13 +59,16 @@ const OrganicProducts = () => {
                     ))}
                 </div>
             </div>
+            
             <div className={`transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'}`}>
-                {active === categories[0].id && <AllProducts/>}
-                {active === categories[1].id && <Breads/>}
-                {active === categories[2].id && <Fruits/>}
-                {active === categories[3].id && <Meats/>}
-                {active === categories[4].id && <Vegetables/>}
+                {active === categories[0].id && <AllProducts />}
+                {active === categories[1].id && <Vegetables />}
+                {active === categories[2].id && <Fruits />}
+                {active === categories[3].id && <Breads />}
+                {active === categories[4].id && <Meats />}
             </div>
+            
+
         </div>
     );
 };

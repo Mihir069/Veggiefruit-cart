@@ -20,7 +20,10 @@ const Fruits = () =>{
         fetchFruit()
     },[dispatch])
     return(
-        <ProductCard productItems={allFruitsList}/>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-2 sm:px-5">
+            <ProductCard productItems={allFruitsList}/>
+        </div>
+        
     )
 }
 export default Fruits;
