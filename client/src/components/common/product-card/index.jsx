@@ -33,4 +33,8 @@ const ProductCard = ( {productItems} ) => {
         </>
     )
 }
+
+ProductCard.prototype = {
+    productItems:PropType.string.isRequired
+}
 export default ProductCard;

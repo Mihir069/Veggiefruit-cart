@@ -1,7 +1,7 @@
 const FruitBanner = () =>{
     return(
         <div className="container py-3">
-            <div className="p-20 flex flex-row justify-between bg-amber-500">
+            <div className="p-20 flex flex-row justify-between bg-amber-400">
                 <div className="px-10 pt-28">
                     <div className="text-6xl text-slate-50 font-bold py-5">Fresh Exotic Fruits</div>
                     <div className="text-6xl text-slate-700 ">in Out Store</div>
