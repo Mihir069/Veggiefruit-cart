@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import AddToCart from "../add-to-cart";
-const ProductCard = ( {productItems} ) => {
+
+const ProductCard = ({ productItems }) => {
     return (
         <>
             {productItems.map((items) => (
@@ -31,10 +33,21 @@ const ProductCard = ( {productItems} ) => {
                 </div>
             ))}
         </>
-    )
-}
+    );
+};
 
-ProductCard.prototype = {
-    productItems:PropType.string.isRequired
-}
+ProductCard.propTypes = {
+    productItems: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+            url: PropTypes.string.isRequired,
+            alt: PropTypes.string.isRequired,
+            category: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+            price: PropTypes.string.isRequired,
+        })
+    ).isRequired
+};
+
 export default ProductCard;

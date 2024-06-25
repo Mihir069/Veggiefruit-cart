@@ -8,17 +8,18 @@ const Breads = () =>{
     const allBreadsList = useSelector((state)=>state.allProduct.bread);
     const dispatch = useDispatch();
 
-    useEffect(()=>{
-        const fetchBreads = async()=>{
-            try{
-                const allBreadsData = await getAllProducts(`breads`);
-                dispatch(setBread(allBreadsData))
-            }catch(error){
-                console.error('Error in fetch')
-            }
+    const fetchBreads = async()=>{
+        try{
+            const allBreadsData = await getAllProducts(`breads`);
+            dispatch(setBread(allBreadsData))
+        }catch(error){
+            console.error('Error in fetch')
         }
+    }
+
+    useEffect(()=>{
         fetchBreads();
-    },[dispatch])
+    },[])
     return(
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-2 sm:px-5">
             <ProductCard productItems={allBreadsList}/>

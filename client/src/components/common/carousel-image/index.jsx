@@ -46,7 +46,7 @@ const CarouselImage = () => {
                 {slides.map((item) => (
                     <div key={item.id} className="w-full relative flex-shrink-0 ">
                         <img src={item.url} alt={item.alt} className="w-full rounded-2xl" />
-                        <div className="absolute bottom-40 left-52 text-2xl font-semibold text-white z-10  bg-amber-400 bg-opacity-50 px-8 py-5 rounded">
+                        <div className="absolute bottom-40 left-52 text-2xl font-semibold text-white z-10  bg-amber-400 bg-opacity-50 px-8 py-5 rounded cursor-pointer">
                             <Link to={item.link}>
                                 {item.text}
                             </Link>

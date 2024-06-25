@@ -9,17 +9,18 @@ const OrganicVegetables = () => {
     const dispatch = useDispatch();
     const containerRef = useRef(null);
 
+    const fetchAllOrganicVegetables = async () => {
+        try {
+            const organicVegetableData = await getAllProducts(`organic-vegetables`);
+            dispatch(setOrganicVegetables(organicVegetableData));
+        } catch (error) {
+            console.error('Error in fetching');
+        }
+    };
+
     useEffect(() => {
-        const fetchAllOrganicVegetables = async () => {
-            try {
-                const organicVegetableData = await getAllProducts(`organic-vegetables`);
-                dispatch(setOrganicVegetables(organicVegetableData));
-            } catch (error) {
-                console.error('Error in fetching');
-            }
-        };
         fetchAllOrganicVegetables();
-    }, [dispatch]);
+    }, []);
 
     const scrollContainer = (direction) => {
         if (containerRef.current) {

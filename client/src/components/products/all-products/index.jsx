@@ -8,17 +8,21 @@ const AllProducts = () => {
     const allProductsList = useSelector((state) => state.allProduct.allProducts);
     const dispatch = useDispatch();
 
+    const fetchAllProducts = async () => {
+        try {
+            const allProductsData = await getAllProducts(`all-products`);
+            dispatch(setAllProducts(allProductsData))
+        } catch (error) {
+            console.error('Error in fetching')
+        }
+    };
+
     useEffect(() => {
-        const fetchAllProducts = async () => {
-            try {
-                const allProductsData = await getAllProducts(`all-products`);
-                dispatch(setAllProducts(allProductsData))
-            } catch (error) {
-                console.error('Error in fetching')
-            }
-        };
         fetchAllProducts();
-    }, [dispatch])
+    }, []);
+
+
+    
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 px-2 sm:px-5">
             <ProductCard productItems ={allProductsList}/>

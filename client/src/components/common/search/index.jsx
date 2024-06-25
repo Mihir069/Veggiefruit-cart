@@ -6,7 +6,7 @@ const Search = () =>{
     }
 
     return(
-        <div className="w-11 p-3 border rounded-full border-amber-400">
+        <div className="w-11 p-3 border rounded-full border-amber-400 hover:bg-amber-400 ease-in-out duration-300">
             <img src={search.url} alt={search.alt}/>
         </div>
     )

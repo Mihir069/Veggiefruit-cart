@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Facebook from "../common/facebook";
 import LinkedIn from "../common/linkedin";
 import Logo from "../common/logo";
@@ -6,11 +7,13 @@ import Youtube from "../common/youtube";
 const Footer = () => {
     return (
         <div className="container bg-slate-600">
-            <div className="p-20">
+            <div className="px-20 pt-10">
                 <div className="flex flex-row ">
-                    <div className="w-96 px-5 py-5">
-                        <Logo />
-                        <div className="text-amber-300 leading-10">Best Product</div>
+                    <div className="w-96 px-5 py-5 cursor-pointer">
+                        <Link to='/'>
+                            <Logo />
+                        </Link>
+                        <div className="text-amber-300 leading-10">Fresh products</div>
                     </div>
                     <div className="w-[52%]">
                         <div className="flex flex-col text-center md:text-left">
@@ -34,7 +37,53 @@ const Footer = () => {
                             <LinkedIn />
                         </div>
                     </div>
-
+                </div>
+                <div className="border-t border-amber-600"></div>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-5 pt-8">
+                    <div className="flex flex-row ">
+                        <div className="w-80 ">
+                            <div className="text-slate-100 text-2xl font-medium leading-10 ">Why People Like us!</div>
+                            <div className="text-slate-300 text-md font-medium leading-9 py-5">typesetting, remaining essentially unchanged. It was popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</div>
+                            <button className="py-2 px-7 border border-amber-400 text-lime-600 font-semibold rounded-3xl hover:text-slate-100 hover:bg-amber-500 ease-in-out duration-300">Read More</button>
+                        </div>
+                    </div>
+                    <div className="text-sm text-gray-900 ">
+                        <h2 className="text-slate-100 text-2xl font-medium leading-10">Shop Info</h2>
+                        <ul className="text-slate-400 text-md font-medium leading-7 py-5">
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">About Us</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Contact Us</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Privacy Policy</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Terms & Condition</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Return Policy</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">FAQs & Help</Link></li>
+                        </ul>
+                    </div>
+                    <div className="text-sm text-gray-900 ">
+                        <h2 className="text-slate-100 text-2xl font-medium leading-10">Account</h2>
+                        <ul className="text-slate-400 text-md font-medium leading-7 py-5">
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">My Account</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Shop details</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Shopping Cart</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Wishlist</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Order History</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">International Orders</Link></li>
+                        </ul>
+                    </div>
+                    <div className="text-sm text-gray-900 ">
+                        <h2 className="text-slate-100 text-2xl font-medium leading-10">Contact</h2>
+                        <ul className="text-slate-400 text-md font-medium leading-7 py-5">
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Address: 1429 Netus Rd, NY 48247</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Email: Example@gmail.com</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Phone: +0123 4567 8910</Link></li>
+                            <li className="mb-3"><Link to='/' className="hover:text-amber-400">Payment Accepted</Link></li>
+                            <li className="mb-3"> <img src="/img/payment.png" alt="payment"/> </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div className="justify-between flex flex-row px-5 py-5 text-slate-50">
+                    <div className="flex flex-row"><img src="/svg/copyright-solid.svg" alt="copyrigth" className="w-4"/><Link to='/' className="pl-2 text-lime-500 hover:text-lime-700">Your Site Name</Link>, All right reserved.</div>
+                    <div className="">Designed By <Link to='/' className="text-lime-500 hover:text-lime-700">HTML Codex</Link> Distributed By <Link to='/' className="text-lime-500 hover:text-lime-700">ThemeWagon</Link></div>
                 </div>
             </div>
         </div>
