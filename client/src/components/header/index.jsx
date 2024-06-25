@@ -40,16 +40,24 @@ const Header = () => {
                     <div className="flex items-center">
                         <Location />
                         <div className="px-3 text-white text-sm tracking-wide">
-                            123 Street, New York
+                            <Link to='/'>
+                                123 Street, New York
+                            </Link>
+
                         </div>
                         <Envlope />
                         <div className="px-3 text-white text-sm tracking-wide">
-                            Email@Example.com
+                            <Link to="/">
+                                Email@Example.com
+                            </Link>
+                            
                         </div>
                     </div>
                     <div className="flex">
                         <div className="px-3 text-white text-sm tracking-wide">
-                            Privacy Policy / Terms of Use / Sales and Refunds
+                            <Link to="/" className="hover:text-amber-400 ease-in-out duration-300"> Privacy Policy</Link> / 
+                            <Link to="/" className="hover:text-amber-400 ease-in-out duration-300"> Terms of Use</Link> /
+                            <Link to="/" className="hover:text-amber-400 ease-in-out duration-300"> Sales and Refunds</Link>
                         </div>
                     </div>
                 </div>
