@@ -1,4 +1,5 @@
 const FoodFilter = () => {
+    
     return (
         <>
             <h1 className="text-2xl md:text-4xl font-customFont font-bold text-slate-600 text-center md:text-left">Fresh fruit shop</h1>
