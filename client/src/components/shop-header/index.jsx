@@ -17,7 +17,7 @@ const ShopHeader = () => {
                 <div className="flex items-center justify-center">
                     {
                         headerList.map((item,index) => (
-                            <div key={item.id} className="inline-flex py-3 text-[16px] text-slate-100 ">
+                            <div key={item.id} className="inline-flex py-3 text-[16px] text-lime-500">
                                 <Link to={item.path}>
                                     {item.name}
                                     {index < headerList.length - 1 && <span className="px-2" >/</span>}
