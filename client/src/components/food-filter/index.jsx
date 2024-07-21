@@ -4,7 +4,7 @@ const FoodFilter = () => {
         <>
             <h1 className="text-2xl md:text-4xl font-customFont font-bold text-slate-600 text-center md:text-left">Fresh fruit shop</h1>
             <div className="flex flex-col md:flex-row md:justify-between py-5 gap-4">
-                <div className="flex flex-row items-center border border-slate-400 rounded-lg w-full md:w-[27%]">
+                <div className="flex flex-row items-center border border-slate-400 rounded-lg w-full md:w-[27%] mb-4 md:mb-0">
                     <input type="search" className="p-3 flex-grow border-0" placeholder="keywords" />
                     <div className="w-12 py-4 flex items-center justify-center border-l border-slate-400 bg-slate-300 rounded-r-lg">
                         <img src="/svg/magnifying-glass-solid.svg" alt="Search" className="w-5 h-5" />
