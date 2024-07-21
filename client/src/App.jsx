@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import ShopPage from "./pages/shopPage";
 import ShopDetailPage from "./pages/shopDetailPage";
+import ContactPage from "./pages/contactPage";
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />}/>
           <Route path="/shop" element={<ShopPage />}/>
           <Route path="/shop-details" element={<ShopDetailPage/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
         </Routes>
         
       </BrowserRouter>
