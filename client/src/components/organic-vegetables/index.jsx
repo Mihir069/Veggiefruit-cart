@@ -24,7 +24,7 @@ const OrganicVegetables = () => {
 
     const scrollContainer = (direction) => {
         if (containerRef.current) {
-            const scrollAmount = containerRef.current.clientWidth / 2; // Scroll half of the container width
+            const scrollAmount = containerRef.current.clientWidth / 2; 
             containerRef.current.scrollBy({
                 left: direction === 'left' ? -scrollAmount : scrollAmount,
                 behavior: 'smooth',
