@@ -8,17 +8,17 @@ const BestSellerCard = () => {
     const bestSellerList = useSelector((state) => state.allProduct.bestSeller)
     const dispatch = useDispatch();
 
+    const fetchBestSeller = async () => {
+        try {
+            const allProductsData = await getAllProducts(`best-seller`);
+            dispatch(setBestSeller(allProductsData))
+        } catch (error) {
+            console.error('Error in fetching')
+        }
+    };
     useEffect(() => {
-        const fetchBestSeller = async () => {
-            try {
-                const allProductsData = await getAllProducts(`best-seller`);
-                dispatch(setBestSeller(allProductsData))
-            } catch (error) {
-                console.error('Error in fetching')
-            }
-        };
         fetchBestSeller();
-    })
+    },[])
     return (
         <>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  px-2 sm:px-5">

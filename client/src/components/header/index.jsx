@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 import Logo from "../common/logo";
 import Search from "../common/search";
 import ShoppingBag from "../common/shopping-bag";
@@ -44,6 +45,25 @@ const Header = () => {
 
     const isPagesActive = dropdownList.some(item => location.pathname === item.path);
 
+    const email = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_pcf7vm4', 'template_mtq9qr4', email.current, {
+                publicKey: 'u4N4ACj2FtShmKf8f',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    console.log('email sent')
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                    console.log('email failed')
+                },
+            );
+    };
     return (
         <div className="container mx-auto">
             <div className={`w-full transition-transform duration-300 ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
@@ -51,20 +71,20 @@ const Header = () => {
                     <div className="flex items-center">
                         <Location />
                         <div className="px-3 text-white text-sm tracking-wide">
-                            <Link to='/'>
+                            <div className="cursor-pointer">
                                 123 Street, New York
-                            </Link>
+                            </div>
                         </div>
                         <Envlope />
                         <div className="px-3 text-white text-sm tracking-wide">
-                            <Link to="/">
+                            <div ref={email} onSubmit={sendEmail} className="cursor-pointer">
                                 Email@Example.com
-                            </Link>
+                            </div>
                         </div>
                     </div>
                     <div className="flex">
                         <div className="px-3 text-white text-sm tracking-wide">
-                            <Link to="/" className="hover:text-amber-400 ease-in-out duration-300"> Privacy Policy</Link> / 
+                            <Link to="/" className="hover:text-amber-400 ease-in-out duration-300"> Privacy Policy</Link> /
                             <Link to="/" className="hover:text-amber-400 ease-in-out duration-300"> Terms of Use</Link> /
                             <Link to="/" className="hover:text-amber-400 ease-in-out duration-300"> Sales and Refunds</Link>
                         </div>
