@@ -8,20 +8,38 @@ import OrganicProducts from "../../components/organic-products";
 import OrganicVegetables from "../../components/organic-vegetables";
 import ShippingSection from "../../components/shipping-section";
 
-const HomePage = () =>{
-    return(
-        <>
-            <Banner/>
-            <ShippingSection/>
-            <OrganicProducts/>
-            <DiscountSection/>
-            <OrganicVegetables/>
-            <FruitBanner/>
-            <BestSeller/>
-            <ConsumerService/>
-            <Footer/>
-        </>
-       
-    )
+const HomePage = () => {
+    return (
+        <div className="w-full">
+            <div className="w-full">
+                <Banner />
+            </div>
+            <div className="mx-auto mt-8">
+                <ShippingSection />
+            </div>
+            <div className=" mx-auto mt-8">
+                <OrganicProducts />
+            </div>
+            <div className="mx-auto mt-8">
+                <DiscountSection />
+            </div>
+            <div className="mx-auto mt-8">
+                <OrganicVegetables />
+            </div>
+            <div className="w-full">
+                <FruitBanner />
+            </div>
+            <div className="mx-auto mt-8">
+                <BestSeller />
+            </div>
+            <div className="mx-auto  mt-8">
+                <ConsumerService />
+            </div>
+            <div className="mx-auto  mt-8">
+                <Footer />
+            </div>
+        </div>
+    );
 }
+
 export default HomePage;

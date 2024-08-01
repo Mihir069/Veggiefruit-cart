@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../common/logo";
 import Search from "../common/search";
 import ShoppingBag from "../common/shopping-bag";
@@ -11,6 +11,7 @@ import Envlope from "../common/envlope";
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
 
     const headerList = [
         { id: 1, name: "Home", path: "/" },
@@ -21,10 +22,10 @@ const Header = () => {
     ];
 
     const dropdownList = [
-        { id: 1, name: "Cart", path: "/" },
-        { id: 2, name: "Checkout", path: "/" },
-        { id: 3, name: "Testimonial", path: "/" },
-        { id: 4, name: "404 Page", path: "/" },
+        { id: 1, name: "Cart", path: "/cart" },
+        { id: 2, name: "Checkout", path: "/checkout" },
+        { id: 3, name: "Testimonial", path: "/testimonial" },
+        { id: 4, name: "404 Page", path: "/404" },
     ];
 
     useEffect(() => {
@@ -39,6 +40,9 @@ const Header = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+
+    const isPagesActive = dropdownList.some(item => location.pathname === item.path);
 
     return (
         <div className="container mx-auto">
@@ -75,7 +79,7 @@ const Header = () => {
                     {headerList.map((item) => (
                         <div
                             key={item.id}
-                            className={`relative inline-flex p-5 text-[16px] font-medium text-gray-400 hover:text-green-700 ${item.name === "Pages" ? 'group' : ''}`}
+                            className={`relative inline-flex p-5 text-[16px] font-medium ${location.pathname === item.path || (item.name === "Pages" && isPagesActive) ? 'text-green-700' : 'text-gray-400'} hover:text-green-700 ${item.name === "Pages" ? 'group' : ''}`}
                         >
                             <Link to={item.path} className={`${item.name === "Pages" ? 'cursor-pointer' : ''}`}>
                                 {item.name}
@@ -86,7 +90,7 @@ const Header = () => {
                                         <Link
                                             key={dropdownItem.id}
                                             to={dropdownItem.path}
-                                            className="block px-4 py-2 text-gray-700 hover:bg-amber-400"
+                                            className={`block px-4 py-2 ${location.pathname === dropdownItem.path ? 'bg-amber-400 text-gray-800' : 'text-gray-700 hover:bg-amber-400'}`}
                                         >
                                             {dropdownItem.name}
                                         </Link>
@@ -122,8 +126,8 @@ const Header = () => {
             {isMenuOpen && (
                 <div className="md:hidden flex flex-col items-start bg-gray-100 w-full py-4">
                     {headerList.map((item) => (
-                        <div key={item.id} className="p-3 w-full text-start">
-                            <Link to={item.path} className="text-gray-400 hover:text-green-400">
+                        <div key={item.id} className={`p-3 w-full text-start ${location.pathname === item.path || (item.name === "Pages" && isPagesActive) ? 'text-green-400' : 'text-gray-400'}`}>
+                            <Link to={item.path} className="hover:text-green-400">
                                 {item.name}
                             </Link>
                         </div>
