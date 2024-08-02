@@ -7,6 +7,7 @@ import store from "./store";
 import ShopPage from "./pages/shopPage";
 import ShopDetailPage from "./pages/shopDetailPage";
 import ContactPage from "./pages/contactPage";
+import ErrorPage from "./pages/errorPage";
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/shop" element={<ShopPage />}/>
           <Route path="/shop-details" element={<ShopDetailPage/>}/>
           <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/404" element={<ErrorPage/>}/>
         </Routes>
         
       </BrowserRouter>

@@ -105,7 +105,7 @@ const Header = () => {
                                 {item.name}
                             </Link>
                             {item.name === "Pages" && (
-                                <div className="absolute z-50 top-full left-0 mt-2 w-48 bg-slate-100 border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div className="absolute z-50 top-14 left-0 w-48 bg-slate-100 border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     {dropdownList.map((dropdownItem) => (
                                         <Link
                                             key={dropdownItem.id}
