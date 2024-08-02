@@ -18,7 +18,7 @@ const ShopHeader = () => {
                     {
                         headerList.map((item,index) => (
                             <div key={item.id} className="inline-flex py-3 text-[16px] text-lime-500">
-                                <Link to={item.path}>
+                                <Link to={item.path} className={`${item.name === "Shop"?"text-slate-100":""}`}>
                                     {item.name}
                                     {index < headerList.length - 1 && <span className="px-2" >/</span>}
                                 </Link>
