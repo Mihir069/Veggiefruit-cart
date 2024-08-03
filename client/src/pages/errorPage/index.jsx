@@ -6,7 +6,7 @@ import Header from "../../components/header";
 import Loader from "../../components/common/loader";
 
 
-const ErrorPage = () =>{
+const ErrorPage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -17,17 +17,25 @@ const ErrorPage = () =>{
         loadData()
     }, [])
 
-    if (loading) {
-        return (
-            <Loader/>
-        )
-    }
-    return(
+    // if (loading) {
+    //     return (
+    //         <Loader/>
+    //     )
+    // }
+    return (
         <>
-        <Header/>
-        <ErrorHeader/>
-        <ErrorDisplay/>
-        <Footer/>
+            <Loader isVisible={loading} />
+            {
+                !loading && (
+                    <>
+                        <Header />
+                        <ErrorHeader />
+                        <ErrorDisplay />
+                        <Footer />
+                    </>
+                )
+            }
+
         </>
     )
 }

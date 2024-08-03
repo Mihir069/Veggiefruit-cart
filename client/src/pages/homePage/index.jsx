@@ -23,42 +23,52 @@ const HomePage = () => {
         loadData();
     }, [])
 
-    if (loading) {
-        return (
-            <Loader />
-        )
-    }
+    // if (loading) {
+    //     return (
+    //         <Loader />
+    //     )
+    // }
     return (
-        <div className="w-full">
-            <Header />
-            <div className="w-full">
-                <Banner />
-            </div>
-            <div className="mx-auto mt-8">
-                <ShippingSection />
-            </div>
-            <div className=" mx-auto mt-8">
-                <OrganicProducts />
-            </div>
-            <div className="mx-auto mt-8">
-                <DiscountSection />
-            </div>
-            <div className="mx-auto mt-8">
-                <OrganicVegetables />
-            </div>
-            <div className="w-full">
-                <FruitBanner />
-            </div>
-            <div className="mx-auto mt-8">
-                <BestSeller />
-            </div>
-            <div className="mx-auto  mt-8">
-                <ConsumerService />
-            </div>
-            <div className="mx-auto  mt-8">
-                <Footer />
-            </div>
-        </div>
+        <>
+            <Loader isVisible={loading} />
+            {
+                !loading && (
+                    <div className="w-full">
+                        <Header />
+                        <div className="w-full">
+                            <Banner />
+                        </div>
+                        <div className="mx-auto mt-8">
+                            <ShippingSection />
+                        </div>
+                        <div className=" mx-auto mt-8">
+                            <OrganicProducts />
+                        </div>
+                        <div className="mx-auto mt-8">
+                            <DiscountSection />
+                        </div>
+                        <div className="mx-auto mt-8">
+                            <OrganicVegetables />
+                        </div>
+                        <div className="w-full">
+                            <FruitBanner />
+                        </div>
+                        <div className="mx-auto mt-8">
+                            <BestSeller />
+                        </div>
+                        <div className="mx-auto  mt-8">
+                            <ConsumerService />
+                        </div>
+                        <div className="mx-auto  mt-8">
+                            <Footer />
+                        </div>
+                    </div>
+
+                )
+            }
+
+        </>
+
     );
 }
 

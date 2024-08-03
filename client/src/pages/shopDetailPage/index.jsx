@@ -6,7 +6,7 @@ import ShopDetails from "../../components/shop-details";
 import ShopHeader from "../../components/shop-header";
 import Loader from "../../components/common/loader";
 
-const ShopDetailPage = () =>{
+const ShopDetailPage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -17,18 +17,26 @@ const ShopDetailPage = () =>{
         loadData()
     }, [])
 
-    if (loading) {
-        return (
-            <Loader/>
-        )
-    }
-    return(
+    // if (loading) {
+    //     return (
+    //         <Loader />
+    //     )
+    // }
+    return (
         <>
-        <Header/>
-        <ShopHeader/>
-        <ShopDetails/>
-        <OrganicVegetables/>
-        <Footer/>
+            <Loader isVisible={loading} />
+            {
+                !loading && (
+                    <>
+                        <Header />
+                        <ShopHeader />
+                        <ShopDetails />
+                        <OrganicVegetables />
+                        <Footer />
+                    </>
+
+                )
+            }
         </>
     )
 }

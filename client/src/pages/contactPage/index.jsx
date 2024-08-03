@@ -16,17 +16,26 @@ const ContactPage = () => {
         loadData()
     }, [])
 
-    if (loading) {
-        return (
-            <Loader/>
-        )
-    }
+    // if (loading) {
+    //     return (
+    //         <Loader/>
+    //     )
+    // }
     return (
         <>
-            <Header/>
-            <ContactHeader />
-            <GetInTouch />
-            <Footer />
+            <Loader isVisible={loading} />
+            {
+                !loading && (
+                    <>
+                        <Header />
+                        <ContactHeader />
+                        <GetInTouch />
+                        <Footer />
+                    </>
+
+                )
+            }
+
         </>
     )
 }
