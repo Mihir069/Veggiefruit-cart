@@ -25,7 +25,7 @@ const ProductCard = ({ productItems }) => {
                                     {items.price}
                                 </div>
                                 <div className="px-1">
-                                    <AddToCart />
+                                    <AddToCart item = {items}/>
                                 </div>
                             </div>
                         </div>

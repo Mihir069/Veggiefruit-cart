@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Banana",
+        "quantity": 1,
         "url": "/img/best-product-3.jpg",
         "alt": "bananas",
         "category": "fruits",
@@ -11,6 +12,7 @@
     {
         "id": 2,
         "name": "Raspberries",
+        "quantity": 1,
         "url": "/img/best-product-2.jpg",
         "alt": "raspberries",
         "category": "fruits",
@@ -20,6 +22,7 @@
     {
         "id": 3,
         "name": "Oranges",
+        "quantity": 1,
         "url": "/img/best-product-1.jpg",
         "alt": "oranges",
         "category": "fruits",

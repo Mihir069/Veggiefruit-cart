@@ -29,6 +29,7 @@
     {
         "id": 4,
         "name": "Potatoes",
+        "quantity": 1,
         "url": "/img/vegetable-item-5.jpg",
         "alt": "potatoes",
         "category": "vegetable",
@@ -38,6 +39,7 @@
     {
         "id": 5,
         "name": "Parsely",
+        "quantity": 1,
         "url": "/img/vegetable-item-6.jpg",
         "alt": "parsely",
         "category": "vegetable",
@@ -47,6 +49,7 @@
     {
         "id": 6,
         "name": "Parsely",
+        "quantity": 1,
         "url": "/img/vegetable-item-6.jpg",
         "alt": "parsely",
         "category": "vegetable",
@@ -56,6 +59,7 @@
     {
         "id": 7,
         "name": "Banana",
+        "quantity": 1,
         "url": "/img/vegetable-item-3.png",
         "alt": "banana",
         "category": "vegetable",
@@ -65,6 +69,7 @@
     {
         "id": 8,
         "name": "Bell Papper",
+        "quantity": 1,
         "url": "/img/vegetable-item-4.jpg",
         "alt": "papper",
         "category": "vegetable",
