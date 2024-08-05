@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Grapes",
+        "quantity": 1,
         "url": "/img/best-product-5.jpg",
         "alt": "grapes",
         "category": "fruits",
@@ -11,6 +12,7 @@
     {
         "id": 2,
         "name": "Apricots",
+        "quantity": 1,
         "url": "/img/best-product-4.jpg",
         "alt": "apricots",
         "category": "fruits",

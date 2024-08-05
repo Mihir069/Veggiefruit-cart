@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Oranges",
+        "quantity": 1,
         "url": "/img/best-product-1.jpg",
         "alt": "oranges",
         "category": "fruits",
@@ -11,6 +12,7 @@
     {
         "id": 2,
         "name": "Apple",
+        "quantity": 1,
         "url": "/img/best-product-6.jpg",
         "alt": "apples",
         "category": "fruits",

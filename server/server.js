@@ -12,6 +12,8 @@ const vegetables = require('./data/vegetables.json');
 const organicVeg = require('./data/organicvegitable.json');
 const bestSeller = require('./data/bestseller.json');
 
+
+
 server.get('/all-products',(req,res)=>{
     res.json(allProducts)
 })

@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Grapes",
+        "quantity": 1,
         "url": "/img/best-product-5.jpg",
         "alt": "grapes",
         "category": "fruits",
@@ -11,6 +12,7 @@
     {
         "id": 2,
         "name": "Grapes",
+        "quantity": 1,
         "url": "/img/best-product-5.jpg",
         "alt": "grapes",
         "category": "fruits",
@@ -20,6 +22,7 @@
     {
         "id": 3,
         "name": "Raspberries",
+        "quantity": 1,
         "url": "/img/best-product-2.jpg",
         "alt": "raspberries",
         "category": "fruits",
@@ -29,6 +32,7 @@
     {
         "id": 4,
         "name": "Apricots",
+        "quantity": 1,
         "url": "/img/best-product-4.jpg",
         "alt": "apricots",
         "category": "fruits",
@@ -38,6 +42,7 @@
     {
         "id": 5,
         "name": "Banana",
+        "quantity": 1,
         "url": "/img/best-product-3.jpg",
         "alt": "bananas",
         "category": "fruits",
@@ -47,6 +52,7 @@
     {
         "id": 6,
         "name": "Oranges",
+        "quantity": 1,
         "url": "/img/best-product-1.jpg",
         "alt": "oranges",
         "category": "fruits",
@@ -56,6 +62,7 @@
     {
         "id": 7,
         "name": "Raspberries",
+        "quantity": 1,
         "url": "/img/best-product-2.jpg",
         "alt": "raspberries",
         "category": "fruits",
@@ -65,6 +72,7 @@
     {
         "id": 8,
         "name": "Grapes",
+        "quantity": 1,
         "url": "/img/best-product-5.jpg",
         "alt": "grapes",
         "category": "fruits",
